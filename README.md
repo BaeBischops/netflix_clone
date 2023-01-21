@@ -6,5 +6,5 @@ This is a netflix clone web app, and has a similar NETFLIX user interface. This 
 live preview of this project [netflix clone](https://baebischops.github.io/netflix_clone/)
 
 some photos of my webapp
-### LAnding Page
+### Landing Page
 ### Home Page
