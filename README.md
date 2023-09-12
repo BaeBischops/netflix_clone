@@ -17,16 +17,13 @@ Netflix Clone Screenshot
   <li>License</li>
 </ul>
 
-Features
-Display a curated list of movies and TV shows.
-Movie and TV show details page with information and trailers.
-User authentication (sign up, sign in, sign out).
-Search functionality to find specific movies and TV shows.
-Responsive design for various screen sizes.
-Demo
-You can view a live demo of the Netflix clone here.
+<h2>Features</h2>
+... comming soon!
 
-Getting Started
+<h2>Demo</h2>
+You can view a live demo of the Netflix clone <a href="#">Here</a>.
+
+<h2>Getting Started</h2>
 To run this project locally, follow the instructions below:
 
 Prerequisites
