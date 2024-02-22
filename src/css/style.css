@@ -250,3 +250,36 @@ input[type='radio'] {
     padding: 10px 0;
 }
 
+/******************** media querry ********************/
+@media only screen and (max-width: 600px){
+    nav button {
+        padding: 5px 10px;
+    }
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1 {
+        font-size: 30px;
+    }
+    .email-sign-up button {
+        font-size: 12px;
+        padding: 10px 15px; 
+    }
+    .text-col, .img-col {
+        flex-basis: 100%;
+    }
+    .features h2 {
+        font-size: 30px;
+    }
+    .features p {
+        font-size: 15px;
+    }
+    .row:nth-child(2), :nth-child(4) {
+        flex-direction: column-reverse;
+    }
+    .features .row{
+        padding: 10px 0;
+    }
+}
