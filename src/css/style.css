@@ -102,9 +102,7 @@ nav button {
     align-items: center;
     justify-content: space-between; /* Spread items evenly */
     padding: 50px 12%; /* Add padding to pull away from screen edge */
-    border-top: .5rem #1a1818 solid;
-    border-bottom: .5rem #1a1818 solid;
-    
+    border-top: .5rem #1a1818 solid;    
 }
 
 .text-col {
