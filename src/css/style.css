@@ -171,5 +171,30 @@ nav button {
     background-color: #303030;
     margin-bottom: 2px;
     cursor: pointer;
-    po
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.accordian .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding .5s;
+}
+
+.accordian input[type='radio']:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
 }
