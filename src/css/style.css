@@ -96,33 +96,36 @@ nav button {
 }
 
 /* the body 1st feature */
-.features {
-    padding: 50px 12%;
-    font-size: 22px;
-}
 
-.row {
+.features {
     display: flex;
-    width: 100%;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 50px 0;
+    justify-content: space-between; /* Spread items evenly */
+    padding: 50px 12%; /* Add padding to pull away from screen edge */
+    border-top: .5rem #1a1818 solid;
+    border-bottom: .5rem #1a1818 solid;
+    
 }
 
 .text-col {
-    position: relative;
-    float: left;
-    flex-basis: 50%;
-    margin-bottom: 20px;
+    flex: 1;
+    padding-right: 20px; /* Add padding between text and image */
+    text-align: left; /* Align text to the left */
 }
 
 .img-col {
-    flex-basis: 50%;
-    margin-bottom: 20px;
+    flex: 1;
+    text-align: right;
 }
 
-.img-col>img {
-    display: block;
-    width: 90%;
-    margin: auto;
+.img-col img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
