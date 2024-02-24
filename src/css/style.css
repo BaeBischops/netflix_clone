@@ -10,4 +10,68 @@
 body {
     background-color: #000000;
     color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.container-fluid{
+    padding: 0 100px;
+}
+
+header #main-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 99;
+    background: rgba(20, 20, 20, .5) !important;
+}
+
+header .navbar-light .navbar-brand img.logo{
+    width: 160px;
+}
+
+header .navbar .menu-header-menu-container, header .navbar .menu-main-menu-container{
+    display: inline-block;
+    width: 100%;
+}
+
+a{
+    color: #d1d0cf;
+    text-decoration: none;
+    outline: medium none;
+    transition: all 0.5s ease-out 0s;
+}
+
+header .navbar ul.navbar-nav{
+    display: block;
+    text-align: center;
+}
+
+header .navbar ul li{
+    list-style: none;
+    margin-right: 18px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+header .navbar ul li.menu-item a{
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding: 0 0 0 10px;
+    line-height: 70px;
+    z-index: 9;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+header .navbar ul li.menu-item a:hover{
+    color: #e50914 !important;
 }
