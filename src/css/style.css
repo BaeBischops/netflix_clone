@@ -357,7 +357,7 @@ header .navbar ul li:last-child{
     z-index: 1;
 }
 .navbar-light .navbar-toggler-icon{
-    background: url(images/menu.png) no-repeat scroll center center;
+    background: url(src/img/menu.png) no-repeat scroll center center;
 }
 .search-toggle:hover, header .navbar ul li.menu-item a:hover{
     color: #e50914 !important;
@@ -772,13 +772,13 @@ header#main-header.menu-sticky{
     z-index: 1;
 }
 #home-slider .slick-bg.s-bg-1{
-    background-image: url(images/slider/slider1.jpg);
+    background-image: url(src/img/slider/slider1.jpg);
 }
 #home-slider .slick-bg.s-bg-2{
-    background-image: url(images/slider/slider2.jpg);
+    background-image: url(src/img/slider/slider2.jpg);
 }
 #home-slider .slick-bg.s-bg-3{
-    background-image: url(images/slider/slider3.jpg);
+    background-image: url(src/img/slider/slider3.jpg);
 }
 
 .slick-bg::before{
@@ -846,7 +846,7 @@ header#main-header.menu-sticky{
 }
 .big-title{
    font-family: 'Playfair Display', serif;
-   background: url(images/texure.jpg);
+   background: url(src/img/texure.jpg);
    background-repeat: repeat-x;
    background-position: 100% 100%;
    color: transparent;
@@ -1064,7 +1064,7 @@ li.slide-item{
     padding: 0px 15px;
 }
 
-li.slide-item .block-images{
+li.slide-item .block-src/img{
     position: relative;
     width: 100%;
     transition: all 0.45s ease 0s;
@@ -1073,18 +1073,18 @@ li.slide-item .block-images{
     transform: translate3d(0,0,0);
     transition: all 0.6s ease 0s;
 }
-li.slide-item:hover .block-images{
+li.slide-item:hover .block-src/img{
     overflow: visible;
     border-left: 5px solid #e50914;
 }
 
-li.slide-item:hover .block-images .img-box{
+li.slide-item:hover .block-src/img .img-box{
     position: relative;
 }
 .favorites-slider .slick-list{
     overflow: visible;
 }
-li.slide-item:hover .block-images{
+li.slide-item:hover .block-src/img{
     z-index: 99;
     transform: scale3d(1.1,1.1,1) translate3d(0,0,0) perspective(500px);
     transform-origin: 50% 50%;
@@ -1177,7 +1177,7 @@ li.slide-item:hover .block-images{
     font-size: 14px;
 }
 
-li.slide-item .block-images::before{
+li.slide-item .block-src/img::before{
     position: absolute;
     content: "";
     top: 0;
@@ -1190,7 +1190,7 @@ li.slide-item .block-images::before{
     opacity: 0;
 }
 
-li.slide-item:hover .block-images::before{
+li.slide-item:hover .block-src/img::before{
     opacity: 1;
     z-index: 9;
 }
@@ -1207,10 +1207,10 @@ li.slide-item:hover .block-social-info{
     padding: 5px 15px;
     font-size: 12px;
 }
-li.slide-item.slick-current:hover .block-images{
+li.slide-item.slick-current:hover .block-src/img{
     transform: scale3d(1.1,1.1,1) translate3d(6%,0,0) perspective(500px) ;
 }
-li.slide-item .block-images::after{
+li.slide-item .block-src/img::after{
     position: absolute;
     content: "";
     top: 0;
@@ -1239,7 +1239,7 @@ li.slide-item{
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
-.block-images .hover-buttons{
+.block-src/img .hover-buttons{
     margin-top: 5px;
 }
 
@@ -1353,13 +1353,13 @@ li.slide-item{
 
 /* ****************** Responsiveness **************** */
 @media (min-width : 1200px){
-    li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-images{
+    li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-src/img{
         transform:  scale3d(1.1,1.1,1) translate3d(-6% , 0,0) perspective(500px);
     }  
 }
 
 @media (max-width : 1199px){
-    li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-images{
+    li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-src/img{
         transform:  scale3d(1.1,1.1,1) translate3d(-6% , 0,0) perspective(500px);
     }
 }
@@ -1370,10 +1370,10 @@ li.slide-item{
     }
 }
 @media (max-width : 768px){
-    li.slide-item .block-images::before{
+    li.slide-item .block-src/img::before{
         content: none;
     }
-    li.slide-item.slick-current:hover .block-images, li.slide-item:hover .block-images, li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-images, li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-images{
+    li.slide-item.slick-current:hover .block-src/img, li.slide-item:hover .block-src/img, li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-src/img, li.slide-item.slick-active + li.slide-item.slick-active + li.slide-item.slick-active:hover .block-src/img{
         transform: none;
     } 
     .type{
@@ -1533,7 +1533,7 @@ ul#top-ten-slider .slick-bg::before{
     left: 10px;
 }
 
-.slick-vertical .slick-slide .block-images::after{
+.slick-vertical .slick-slide .block-src/img::after{
     position: absolute;
     content: "";
     top: 0;
@@ -1543,10 +1543,10 @@ ul#top-ten-slider .slick-bg::before{
     background: linear-gradient(90deg, rgba(0,0,0,0.8) 0% , rgba(20,20,20,0.4) 50% , rgba(83,100,141,0) 100%);
     transition: all 0.45s ease 0s;
 }
-.slick-vertical .slick-slide .block-images{
+.slick-vertical .slick-slide .block-src/img{
     overflow: visible;
 }
-.slick-vertical .slick-slide .block-images::before{
+.slick-vertical .slick-slide .block-src/img::before{
     position: absolute;
     content: "";
     top: 0;
@@ -1558,11 +1558,11 @@ ul#top-ten-slider .slick-bg::before{
     transition: all 0.45s ease 0s;
     border-left:  6px solid #e50914;
 }
-.slick-vertical .slick-slide.slick-current.slick-active .block-images::before{
+.slick-vertical .slick-slide.slick-current.slick-active .block-src/img::before{
     opacity: 1;
     transition: all 0.45s ease 0s;
 }
-.slick-vertical .slick-slide.slick-current.slick-active .block-images{
+.slick-vertical .slick-slide.slick-current.slick-active .block-src/img{
     width: 100%;
     overflow: visible;
     transform-origin: 100% 100%;
@@ -1670,7 +1670,7 @@ li.slide-item .block-description .parallax-ratting span{
     height: 100%;
     padding: 100px 0;
     position: relative;
-    background: url(images/parallax/avatar.jpg) center center;
+    background: url(src/img/parallax/avatar.jpg) center center;
     background-size: cover;
     background-attachment: fixed ;
 }
