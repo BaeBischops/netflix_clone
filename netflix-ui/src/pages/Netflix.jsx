@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Netflix(props) {
+const Netflix = () => {
     return (
-        <div>Netflix</div>
+        <div>
+           NETFLIX 
+        </div>
     );
-}
+};
 
 export default Netflix;
