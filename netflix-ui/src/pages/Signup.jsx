@@ -1,10 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import BackgroundImage from '../components/BackgroundImage';
+import Header from '../components/Header';
 
-function Signup(props) {
+export default function Signup() {
     return (
-        <div>Sign Up</div>
+    <Container>
+        <BackgroundImage />
+        <Header />
+    </Container>
     );
+    
 }
 
-export default Signup;
+const Container = styled.div``;
