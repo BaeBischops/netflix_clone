@@ -99,7 +99,19 @@ position: relative;
         text-align: center;
         font-size: 2rem;
         h1 {
-        padding: 0 25rem;
+            padding: 0 25rem;
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        h4{
+            margin: 1rem 0 0;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+        h6{
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.5;
         }
     }
     .form {
