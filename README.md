@@ -21,12 +21,12 @@ This project is a Netflix clone built for educational purposes. It aims to repli
     <img src='netflix-ui\src\assets\sigin.png' />
   </li>
   <li>
-    <h4>movies</h4>
+    <h4>home page</h4>
     <img src='netflix-ui\src\assets\homepage.png' />
   </li>
   <li>
-    <h4>full demonstration</h4>
-    <img src='netflix-ui\src\assets\sigin.png' />
+    <h4>cards section</h4>
+    <img src='netflix-ui\src\assets\card.png' />
   </li>
   <li>
     <h4>follow the link for ui/ux</h4>
