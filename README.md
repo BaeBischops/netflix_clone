@@ -22,7 +22,7 @@ This project is a Netflix clone built for educational purposes. It aims to repli
   </li>
   <li>
     <h4>movies</h4>
-    <img src='netflix-ui\src\assets\sigin.png' />
+    <img src='netflix-ui\src\assets\homepage.png' />
   </li>
   <li>
     <h4>full demonstration</h4>
