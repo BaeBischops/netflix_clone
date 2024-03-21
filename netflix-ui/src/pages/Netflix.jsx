@@ -1,56 +1,78 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import backgroundImage from '../assets/home.jpg';
-import MovieLogo from '../assets/homeTitle.webp';
-import {FaPlay} from 'react-icons/fa';
-import {AiOutlineInfoCircle} from 'react-icons/ai';
-import {useNavigate} from 'react-router-dom';
-import {useDispatch} from 'react-redux';
-import styled from 'styled-components';
-import Slider from '../components/Slider'
-import { getGenres } from '../store';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import backgroundImage from "../assets/home.jpg";
+import MovieLogo from "../assets/homeTitle.webp";
 
-const Netflix = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
+import { onAuthStateChanged } from "firebase/auth";
+import { firebaseAuth } from "../utils/firebase-config";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchMovies, getGenres } from "../store";
+import { FaPlay } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import Slider from "../components/Slider";
+function Netflix() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const movies = useSelector((state) => state.netflix.movies);
+  const genres = useSelector((state) => state.netflix.genres);
+  const genresLoaded = useSelector((state) => state.netflix.genresLoaded);
 
-    window.onscroll = () => {
-        setIsScrolled(window.screenY === 0? false: true);
-        return () => (window.onscroll = null);
-    };
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-    const navigate = useNavigate();
+  useEffect(() => {
+    dispatch(getGenres());
+  }, []);
 
-    const dispatch = useDispatch();
+  useEffect(() => {
+    if (genresLoaded) {
+      dispatch(fetchMovies({ genres, type: "all" }));
+    }
+  }, [genresLoaded]);
 
-    useEffect(() => {
-      dispatch(getGenres())
-    });
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if (!currentUser) navigate("/login");
+  });
 
-    return (
-        <Container>
-           <Navbar isScrolled={isScrolled}/>
-            <div className="hero">
-                <img src={backgroundImage} alt="bacground" className='background-image'/>
-                <div className="container">
-                    <div className="logo">
-                        <img src={MovieLogo} alt="MovieLogo" />
-                    </div>
-                    <div className="button flex">
-                        <button className="flex j-center a-center" onClick={()=>navigate('/player')}>
-                            <FaPlay />Play
-                        </button>
-                        <button className="flex j-center a-center">
-                            <AiOutlineInfoCircle />More Info
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <Slider />
-        </Container>
-    );
-};
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    return () => (window.onscroll = null);
+  };
 
-export default Netflix;
+  return (
+    <Container>
+      <Navbar isScrolled={isScrolled} />
+      <div className="hero">
+        <img
+          src={backgroundImage}
+          alt="background"
+          className="background-image"
+        />
+        <div className="container">
+          <div className="logo">
+            <img src={MovieLogo} alt="Movie Logo" />
+          </div>
+          <div className="buttons flex">
+            <button
+              onClick={() => navigate("/player")}
+              className="flex j-center a-center"
+            >
+              <FaPlay />
+              Play
+            </button>
+            <button className="flex j-center a-center">
+              <AiOutlineInfoCircle />
+              More Info
+            </button>
+          </div>
+        </div>
+      </div>
+      <Slider movies={movies} />
+    </Container>
+  );
+}
+
 const Container = styled.div`
   background-color: black;
   .hero {
@@ -100,3 +122,4 @@ const Container = styled.div`
     }
   }
 `;
+export default Netflix;
