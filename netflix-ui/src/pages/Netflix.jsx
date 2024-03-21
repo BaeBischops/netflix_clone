@@ -7,6 +7,7 @@ import {AiOutlineInfoCircle} from 'react-icons/ai';
 import {useNavigate} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import styled from 'styled-components';
+import Slider from '../components/Slider'
 import { getGenres } from '../store';
 
 const Netflix = () => {
@@ -44,6 +45,7 @@ const Netflix = () => {
                     </div>
                 </div>
             </div>
+            <Slider />
         </Container>
     );
 };
