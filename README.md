@@ -10,6 +10,18 @@ This project is a Netflix clone built for educational purposes. It aims to repli
   <li><b>Responsive design:</b> The application is responsive and optimized for various screen sizes.</li>
 </ul>
 
+<h1>Web Demo...</h1>
+<ol>
+  <li>
+    <h4>landing page</h4>
+    <img src='netflix-ui\src\assets\signup.png' />
+  </li>
+  <li>
+    <h4>sign in page</h4>
+    <img src='netflix-ui\src\assets\sigin.png' />
+  </li>
+</ol>
+
 <h1>Technologies Used</h1>
 <ul>
   <li><b>React</b>: JavaScript library for building user interfaces.</li>
