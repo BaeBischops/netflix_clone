@@ -24,7 +24,7 @@ const Netflix = () => {
     useEffect(() => {
       dispatch(getGenres())
     });
-    
+
     return (
         <Container>
            <Navbar isScrolled={isScrolled}/>
