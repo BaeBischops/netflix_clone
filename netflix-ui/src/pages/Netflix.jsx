@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import backgroundImage from '../assets/home.jpg';
 import MovieLogo from '../assets/homeTitle.webp';
 import {FaPlay} from 'react-icons/fa';
 import {AiOutlineInfoCircle} from 'react-icons/ai';
 import {useNavigate} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 import styled from 'styled-components';
+import { getGenres } from '../store';
 
 const Netflix = () => {
     const [isScrolled, setIsScrolled] = useState(false);
+
     window.onscroll = () => {
         setIsScrolled(window.screenY === 0? false: true);
         return () => (window.onscroll = null);
     };
 
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      dispatch(getGenres())
+    });
+    
     return (
         <Container>
            <Navbar isScrolled={isScrolled}/>
