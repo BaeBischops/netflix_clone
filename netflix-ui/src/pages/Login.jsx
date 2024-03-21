@@ -46,8 +46,15 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         />
-                        <button onClick={handleLogin}>Login to your account</button>
+                        <button onClick={handleLogin}>Sign In</button>
+                        <p>OR</p>
+                        <button className="sign-in-code">Use a Sign-In Code</button>
+                        <p>Forgot Password?</p>
                     </div>
+                    <footer>
+                        <input type="checkbox" name="remember" id="remember" />
+                        <span>Remeber Me</span>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -89,6 +96,34 @@ const Container = styled.div`
             border-radius: 0.2rem;
             font-weight: bolder;
             font-size: 1.05rem;
+          }
+          p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin: 0;
+            padding: 0;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+          }
+          .sign-in-code {
+            border: 0;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            fill: currentColor;
+            position: relative;
+            transition-duration: 250ms;
+            transition-property: background-color, border-color;
+            transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+            vertical-align: text-top;
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 500;
+            min-height: 2.5rem;
+            padding: 0.375rem 1rem;
+            background: rgba(128, 128, 128, 0.4);
+            color: rgb(255, 255, 255);
           }
         }
       }
