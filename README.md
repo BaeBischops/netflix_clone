@@ -10,7 +10,7 @@ This project is a Netflix clone built for educational purposes. It aims to repli
   <li><b>Responsive design:</b> The application is responsive and optimized for various screen sizes.</li>
 </ul>
 
-<h1>Web Demo...</h1>
+<h1>Web App Demonstration...</h1>
 <ol>
   <li>
     <h4>landing page</h4>
@@ -20,7 +20,21 @@ This project is a Netflix clone built for educational purposes. It aims to repli
     <h4>sign in page</h4>
     <img src='netflix-ui\src\assets\sigin.png' />
   </li>
+  <li>
+    <h4>movies</h4>
+    <img src='netflix-ui\src\assets\sigin.png' />
+  </li>
+  <li>
+    <h4>full demonstration</h4>
+    <img src='netflix-ui\src\assets\sigin.png' />
+  </li>
+  <li>
+    <h4>follow the link for ui/ux</h4>
+    <a href='https//:www.bischops.africa/nefflix'><b>Neflix Clone</b></a> 
+  </li>
 </ol>
+
+
 
 <h1>Technologies Used</h1>
 <ul>
