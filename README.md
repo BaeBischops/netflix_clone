@@ -34,7 +34,7 @@ This project is a Netflix clone built for educational purposes. It aims to repli
   </li>
   <li>
     <h4>tv shows</h4>
-    <img src='netflix-ui\src\assets\card.png' />
+    <img src='netflix-ui\src\assets\shows.png' />
   </li>
   <li>
     <h4>follow the link for ui/ux</h4>
