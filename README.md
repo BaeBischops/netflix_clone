@@ -36,10 +36,7 @@ This project is a Netflix clone built for educational purposes. It aims to repli
     <h4>tv shows</h4>
     <img src='netflix-ui\src\assets\shows.png' />
   </li>
-  <li>
-    <h4>follow the link for ui/ux</h4>
-    <a href='https//:www.bischops.africa/nefflix'><b>Neflix Clone</b></a> 
-  </li>
+
 </ol>
 
 
